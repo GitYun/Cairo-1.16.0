@@ -1,7 +1,7 @@
-prefix=/d/OpenFree/Cairo1.16.0
-exec_prefix=/d/OpenFree/Cairo1.16.0
-libdir=/d/OpenFree/Cairo1.16.0/lib
-includedir=/d/OpenFree/Cairo1.16.0/include
+prefix=/d/OpenFree/Cairo-1.16.0
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib/dep
+includedir=${exec_prefix}/include
 
 Name: FreeType 2
 URL: https://freetype.org

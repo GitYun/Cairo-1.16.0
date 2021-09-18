@@ -1,5 +1,5 @@
-prefix=/d/OpenFree/Cairo1.16.0
-libdir=${prefix}/lib
+prefix=/d/OpenFree/Cairo-1.16.0
+libdir=${prefix}/lib/dep
 includedir=${prefix}/include
 
 Name: GObject

@@ -1,6 +1,6 @@
-prefix=/d/OpenFree/Cairo1.16.0
+prefix=/d/OpenFree/Cairo-1.16.0
 exec_prefix=${prefix}
-libdir=${exec_prefix}/lib
+libdir=${exec_prefix}/lib/dep
 includedir=${prefix}/include
 sysconfdir=${prefix}/etc
 localstatedir=${prefix}/var
@@ -15,4 +15,4 @@ Requires:  freetype2 >= 21.0.15
 Requires.private:  expat
 Libs: -L${libdir} -lfontconfig
 Libs.private: -L${libdir} -liconv 
-Cflags: -I${includedir} -I${includedir} 
+Cflags: -I${includedir}/fontconfig

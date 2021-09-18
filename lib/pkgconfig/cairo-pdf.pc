@@ -1,6 +1,6 @@
-prefix=/d/OpenFree/Cairo1.16.0
+prefix=/d/OpenFree/Cairo-1.16.0
 exec_prefix=${prefix}
-libdir=${exec_prefix}/lib
+libdir=${exec_prefix}/lib/dep
 includedir=${prefix}/include
 
 Name: cairo-pdf

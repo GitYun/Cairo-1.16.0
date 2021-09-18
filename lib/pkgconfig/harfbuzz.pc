@@ -1,7 +1,7 @@
-prefix=/d/OpenFree/Cairo1.16.0
-exec_prefix=/mingw64
-libdir=/mingw64/lib
-includedir=/mingw64/include
+prefix=/d/OpenFree/Cairo-1.16.0
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib/dep
+includedir=${exec_prefix}/include
 
 Name: harfbuzz
 Description: HarfBuzz text shaping library

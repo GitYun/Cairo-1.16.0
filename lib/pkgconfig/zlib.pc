@@ -1,8 +1,8 @@
-prefix=/d/OpenFree/Cairo1.16.0
+prefix=/d/OpenFree/Cairo-1.16.0
 exec_prefix=${prefix}
-libdir=${exec_prefix}/lib
+libdir=${exec_prefix}/lib/dep
 sharedlibdir=${exec_prefix}/bin
-includedir=${prefix}/include
+includedir=${prefix}/include/pixman-1
 
 Name: zlib
 Description: zlib compression library

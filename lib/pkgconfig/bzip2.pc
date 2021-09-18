@@ -1,7 +1,7 @@
-prefix=/d/OpenFree/Cairo1.16.0
+prefix=/d/OpenFree/Cairo-1.16.0
 exec_prefix=${prefix}
-bindir=${exec_prefix}/bin
-libdir=${exec_prefix}/lib
+bindir=${exec_prefix}/bin/dep
+libdir=${exec_prefix}/lib/dep
 includedir=${prefix}/include
 
 Name: bzip2

@@ -1,7 +1,7 @@
-prefix=/d/OpenFree/Cairo1.16.0
+prefix=/d/OpenFree/Cairo-1.16.0
 exec_prefix=${prefix}
-libdir=${exec_prefix}/lib
-includedir=${prefix}/include/libpng16
+libdir=${exec_prefix}/lib/dep
+includedir=${prefix}/include
 
 Name: libpng
 Description: Loads and saves PNG files
@@ -9,4 +9,4 @@ Version: 1.6.37
 Requires: zlib
 Libs: -L${libdir} -lpng16
 Libs.private: -lz 
-Cflags: -I${includedir}
+Cflags: -I${includedir}/libpng16

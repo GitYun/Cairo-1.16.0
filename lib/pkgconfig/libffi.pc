@@ -1,6 +1,6 @@
-prefix=/d/OpenFree/Cairo1.16.0
+prefix=/d/OpenFree/Cairo-1.16.0
 exec_prefix=${prefix}
-libdir=${exec_prefix}/lib
+libdir=${exec_prefix}/lib/dep
 toolexeclibdir=${exec_prefix}/lib/../lib
 includedir=${libdir}/libffi-3.2.1/include
 

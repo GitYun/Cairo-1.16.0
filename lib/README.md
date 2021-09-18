@@ -1,4 +1,27 @@
-+ pkgconfig下是编译 Cairo-1.16.0 时需要的链接信息，其中的依赖位于 dep，均来自 emacs，在要编译Cairo-1.16.0时，将 dep 目录下的内容拷贝到 lib 目录下（因为 pkgconfig 下文件链接信息是基于lib目录的，也可以改pkgconfig文件，不过有点儿多）
++ pkgconfig下是编译 Cairo-1.16.0 时需要的链接信息，其中的依赖位于 dep，均来自 emacs，在要编译Cairo-1.16.0时，在git bash下使用mingw编译的话，需要设置git bash的环境变量，以时其`./configure`工具调用`pkg-config.exe`时能够找到各个库的位置；
+
+  在git安装根目录下：`ProtableGit/etc/bash.bashrc`文件的最后，添加环境变量：
+
+  ```
+  export PKG_CONFIG_PATH=/d/OpenFree/Cairo-1.16.0/lib/pkgconfig
+  export LD_LIBRARY_PATH=/d/OpenFree/Cairo-1.16.0/lib/dep
+  ```
+
+  然后使用：`pkg-config.exe --libs pixman-1`检查是否输出正确；
+
+  若执行./configure后找不到提示pkg-config找不到libpng，则可以在git bash中输入：`export png_REQUIRES="install_dir/libpng.a" `以添加一个环境变量；
+
+  最后，在git bash中输入：
+
+  ```
+  ./configure --enable-gl=yes --enable-wgl=yes
+  ```
+
+  其中`--enbale-gl=yes`使能OpenGL，而`--enable-wgl=yes`特定于windows平台的OpenGL，若在linux下，则是`--enable-glx=yes`
+
+  这样，就生成了可用的makefile文件，然后就可以开始编译了。
+
 + **libcairo-2.dll.a** 是为了避免与 **libcairo.a** 在链接时冲突而改名了的，原本名称为 **libcairo.dll.a**
 
 - 支持Cairo的程序，只需要链接./dep文件下的：libbz2.a, libexpat.a, libfontconfig.a, libfreetype.a, libgraphite2.a libintl.a, libpixman-1.a, libpng-9.a, libz-9.a即可
+
