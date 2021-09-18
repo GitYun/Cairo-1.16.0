@@ -21,7 +21,33 @@
 
   这样，就生成了可用的makefile文件，然后就可以开始编译了。
 
+
 + **libcairo-2.dll.a** 是为了避免与 **libcairo.a** 在链接时冲突而改名了的，原本名称为 **libcairo.dll.a**
 
-- 支持Cairo的程序，只需要链接./dep文件下的：libbz2.a, libexpat.a, libfontconfig.a, libfreetype.a, libgraphite2.a libintl.a, libpixman-1.a, libpng-9.a, libz-9.a即可
+- 支持Cairo的程序的最小依赖库（只需要链接./dep文件下的）：
+
+  ```
+  libbz2.a
+  libexpat.a
+  libfontconfig.a
+  libfreetype.a
+  libgraphite2.a
+  libharfbuzz.a
+  libintl.a
+  libpixman-1.a
+  libpng-9.a
+  libz-9.a
+  
+  rpcrt4
+  ```
+
+  `rpcrt4`是再windows平台中必须使用的，rpcrt4是windows系统的dll
+
+  在运行编译后的程序时，还需要`libglib.dll`, `libiconv.dll`, `libpcre.dll` 这3个库
+
+  
+
+- `libcairo-gl.a`是编译Cairo-1.16.0时，使能了`--enable-gl=yes`，`--enable-wgl=yes`选项的库，作用是支持OpenGL
+
+- `libcairo-gl-strip.a`是strip掉调试符号的`libcairo-gl.a`版本
 
